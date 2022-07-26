@@ -6,7 +6,7 @@
 let counterNumber = document.querySelector(".counter-number");
 let numLog = document.querySelector(".num-log");
 const btnAdd = document.querySelector("#btn-add");
-// const btnSub = document.querySelector("#btn-sub");
+const btnSub = document.querySelector("#btn-sub");
 
 counterNumber.textContent = 3;
 
@@ -32,6 +32,9 @@ counterNumber.textContent = 3;
 //   num += - 1;
 //   counterNumber.textContent = num;
 // });
+
+
+
 
 // //CRIANDO LOG
 // let num = 3;
@@ -82,6 +85,8 @@ counterNumber.textContent = 3;
 //   numLog.innerHTML += `${arrayAdd[arrayAdd.length -1]} , `;
 // });
 
+
+// TESTANDO POSSIBILIDADES
 // let num = [3];
 
 // btnAdd.addEventListener("click", () => {
@@ -91,6 +96,8 @@ counterNumber.textContent = 3;
 // numLog.innerHTML += `${num[num.length - 1]} , `;
 // });
 
+
+//Botao mais
 let num = [3];
 
 btnAdd.addEventListener("click", () => {
@@ -101,5 +108,14 @@ btnAdd.addEventListener("click", () => {
   num.push(sum);
 
   counterNumber.innerHTML = num[num.length - 1];
+  numLog.innerHTML += `${num[num.length - 1]} , `;
+});
+
+// Botao menos
+btnSub.addEventListener("click", () => {
+  let numSub = num.pop();
+  console.log(numSub)
+
+  counterNumber.innerHTML = numSub - 2;
   numLog.innerHTML += `${num[num.length - 1]} , `;
 });
