@@ -65,19 +65,35 @@ counterNumber.textContent = 3;
 // console.log(sumArray)
 
 
-let array2 = [3];
+// let array2 = [3];
+
+// btnAdd.addEventListener("click", () => {
+//   let lastNumber = array2[array2.length - 1];
+  
+//   let sumNum = 0;
+//   sumNum += lastNumber + 2;
+
+//   array2.push(sumNum);
+
+//   counterNumber.innerHTML = array2[array2.length - 1];
+//   numLog.innerHTML += `${sumNum} , `;
+// });
+
+
+// REFATORANDO COM .map()
+let array3 = [3];
 
 btnAdd.addEventListener("click", () => {
-  let lastNumber = array2[array2.length - 1];
-  
-  let sumNum = 0;
-  sumNum += lastNumber + 2;
+  let arrayAdd = array3.map((num) => num + 2);
 
-  array2.push(sumNum);
+  array3.push(arrayAdd[arrayAdd.length -1]);
 
-  counterNumber.innerHTML = array2[array2.length - 1];
-  numLog.innerHTML += `${sumNum} , `;
+  counterNumber.innerHTML = arrayAdd[arrayAdd.length -1];
+  numLog.innerHTML += `${arrayAdd[arrayAdd.length -1]} , `;
 });
+
+
+
 
 
 
