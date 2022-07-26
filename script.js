@@ -4,8 +4,9 @@
 // E toda vez que clicar aumenta 2
 
 let counterNumber = document.querySelector(".counter-number");
+let numLog = document.querySelector(".num-log");
 const btnAdd = document.querySelector("#btn-add");
-const btnSub = document.querySelector("#btn-sub");
+// const btnSub = document.querySelector("#btn-sub");
 
 counterNumber.textContent = 3;
 
@@ -20,17 +21,30 @@ counterNumber.textContent = 3;
 
 
 // Transformando em Arrow Function
+// let num = 3;
+// btnAdd.addEventListener("click", () => {
+//   num += + 2;
+//   counterNumber.textContent = num;
+// });
+
+
+// Acrescentando btn menos (DIMINUINDO EM 1 a cada click)
+// let num2 = 3;
+// btnSub.addEventListener("click", () => {
+//   num += - 1;
+//   counterNumber.textContent = num;
+// });
+
+//CRIANDO LOG
 let num = 3;
 btnAdd.addEventListener("click", () => {
   num += + 2;
-  counterNumber.textContent = num;
+  counterNumber.innerHTML = num;
+  numLog.innerHTML += `${num} , `;
+  console.log(num);
 });
 
-// Acrescentando btn menos (DIMINUINDO EM 1 a cada click)
-let num2 = 3;
-btnSub.addEventListener("click", () => {
-  num += - 1;
-  counterNumber.textContent = num;
-});
+
+
 
 
