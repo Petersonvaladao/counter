@@ -35,14 +35,52 @@ counterNumber.textContent = 3;
 //   counterNumber.textContent = num;
 // });
 
-//CRIANDO LOG
-let num = 3;
+// //CRIANDO LOG
+// let num = 3;
+// btnAdd.addEventListener("click", () => {
+//   num += + 2;
+//   counterNumber.innerHTML = num;
+//   numLog.innerHTML += `${num} , `;
+//   console.log(num);
+// });
+
+
+
+
+
+
+// let array1 = [3,5,9, 11, 13];
+// let sumArray = [];
+// let num = array1[array1.length - 1];
+
+// console.log(num);
+
+
+// array1.forEach((element) => {
+//   let sum = 0;
+//   sum += element + 2;
+//   sumArray.push(sum)
+// });
+
+// console.log(sumArray)
+
+
+let array2 = [3];
+
 btnAdd.addEventListener("click", () => {
-  num += + 2;
-  counterNumber.innerHTML = num;
-  numLog.innerHTML += `${num} , `;
-  console.log(num);
+  let lastNumber = array2[array2.length - 1];
+  
+  let sumNum = 0;
+  sumNum += lastNumber + 2;
+
+  array2.push(sumNum);
+
+  counterNumber.innerHTML = array2[array2.length - 1];
+  numLog.innerHTML += `${sumNum} , `;
 });
+
+
+
 
 
 
