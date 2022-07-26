@@ -1,4 +1,4 @@
-// missão 2: faça uma div com uma TAG P e um botão, toda vez que eu clicar no botão o conteúdo de P deve mudar.
+// faça uma div com uma TAG P e um botão, toda vez que eu clicar no botão o conteúdo de P deve mudar.
 // O P primeiro deve ser um contador.
 // Começando em 3
 // E toda vez que clicar aumenta 2
@@ -19,14 +19,12 @@ counterNumber.textContent = 3;
 //   counterNumber.textContent = num;
 // }
 
-
 // Transformando em Arrow Function
 // let num = 3;
 // btnAdd.addEventListener("click", () => {
 //   num += + 2;
 //   counterNumber.textContent = num;
 // });
-
 
 // Acrescentando btn menos (DIMINUINDO EM 1 a cada click)
 // let num2 = 3;
@@ -44,17 +42,11 @@ counterNumber.textContent = 3;
 //   console.log(num);
 // });
 
-
-
-
-
-
 // let array1 = [3,5,9, 11, 13];
 // let sumArray = [];
 // let num = array1[array1.length - 1];
 
 // console.log(num);
-
 
 // array1.forEach((element) => {
 //   let sum = 0;
@@ -64,12 +56,11 @@ counterNumber.textContent = 3;
 
 // console.log(sumArray)
 
-
 // let array2 = [3];
 
 // btnAdd.addEventListener("click", () => {
 //   let lastNumber = array2[array2.length - 1];
-  
+
 //   let sumNum = 0;
 //   sumNum += lastNumber + 2;
 
@@ -79,26 +70,36 @@ counterNumber.textContent = 3;
 //   numLog.innerHTML += `${sumNum} , `;
 // });
 
-
 // REFATORANDO COM .map()
-let array3 = [3];
+// let array3 = [3];
+
+// btnAdd.addEventListener("click", () => {
+//   let arrayAdd = array3.map((num) => num + 2);
+
+//   array3.push(arrayAdd[arrayAdd.length -1]);
+
+//   counterNumber.innerHTML = arrayAdd[arrayAdd.length -1];
+//   numLog.innerHTML += `${arrayAdd[arrayAdd.length -1]} , `;
+// });
+
+// let num = [3];
+
+// btnAdd.addEventListener("click", () => {
+//   num.push(num[num.length - 1] + 2);
+
+// counterNumber.innerHTML = num[num.length - 1];
+// numLog.innerHTML += `${num[num.length - 1]} , `;
+// });
+
+let num = [3];
 
 btnAdd.addEventListener("click", () => {
-  let arrayAdd = array3.map((num) => num + 2);
+  let sum = 0;
+  for (let i = 0; i < num.length; i++) {
+    sum = num[i] + 2;
+  }
+  num.push(sum);
 
-  array3.push(arrayAdd[arrayAdd.length -1]);
-
-  counterNumber.innerHTML = arrayAdd[arrayAdd.length -1];
-  numLog.innerHTML += `${arrayAdd[arrayAdd.length -1]} , `;
+  counterNumber.innerHTML = num[num.length - 1];
+  numLog.innerHTML += `${num[num.length - 1]} , `;
 });
-
-
-
-
-
-
-
-
-
-
-
