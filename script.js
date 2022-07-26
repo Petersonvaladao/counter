@@ -108,7 +108,7 @@ btnAdd.addEventListener("click", () => {
   num.push(sum);
 
   counterNumber.innerHTML = num[num.length - 1];
-  numLog.innerHTML += `${num[num.length - 1]} , `;
+  numLog.innerHTML += `${num[num.length - 1]}, `;
 });
 
 // Botao menos
@@ -116,6 +116,12 @@ btnSub.addEventListener("click", () => {
   let numSub = num.pop();
   console.log(numSub)
 
-  counterNumber.innerHTML = numSub - 2;
-  numLog.innerHTML += `${num[num.length - 1]} , `;
+  if(num <= 0) {
+    counterNumber.innerHTML = 0;
+    numLog.innerHTML += `${0} , `;
+    num = [1];
+  } else {
+    counterNumber.innerHTML = numSub - 2;
+    numLog.innerHTML += `${num[num.length - 1]}, `;
+  }
 });
